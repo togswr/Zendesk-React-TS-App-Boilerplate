@@ -1,21 +1,22 @@
 {
-  "parser": "babel-eslint",
-  "plugins": [
-    "react"
-  ],
+  "parserOptions": {
+    "project": ["tsconfig.json"]
+  },
+  "plugins": ["react"],
   "env": {
     "browser": true,
     "node": true,
-    "jest": true
+    "jest": true,
+    "es2021": true
   },
   "rules": {
     "indent": ["error", 2],
-    "no-undef": [ 1 ],
+    "no-undef": [1],
     "no-var": 1,
     "no-trailing-spaces": 1,
     "no-unused-vars": 1,
     "semi": ["error", "never"],
-    "comma-dangle": ["error", "always-multiline"],
+    "comma-dangle": ["error", { "functions": "never" }],
     "jsx-quotes": 1,
     "react/display-name": [1, { "ignoreTranspilerName": false }],
     "react/forbid-prop-types": [1, { "forbid": ["any"] }],
@@ -45,11 +46,20 @@
     "react/prop-types": 1,
     "react/react-in-jsx-scope": 1,
     "react/self-closing-comp": 1,
-    "react/sort-comp": 1
+    "react/sort-comp": 1,
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"]
   },
   "settings": {
     "react": {
       "version": "detect"
     }
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "standard-with-typescript",
+    "prettier"
+  ],
+  "globals": {
+    "ZAFClient": true
   }
 }
