@@ -4,14 +4,16 @@ import zafClient from '../../zafClient'
 import Footer from '../Footer'
 import { ZafUserContext } from '../../types/zafClient'
 
-const App = () => {
+const App: React.FC = () => {
   const [requester, setRequester] = React.useState<ZafUserContext>()
 
   React.useEffect(() => {
-    (async () => {
-      zafClient.invoke('resize', { height: '75px' })
+    void (async () => {
+      void zafClient.invoke('resize', { height: '75px' })
 
-      const data = await zafClient.get<{'ticket.requester': ZafUserContext}>('ticket.requester')
+      const data = await zafClient.get<{ 'ticket.requester': ZafUserContext }>(
+        'ticket.requester'
+      )
       const requester = data['ticket.requester']
       setRequester(requester)
     })()
@@ -19,7 +21,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <p className="Requester-name">Requesters name is {requester ? requester.name : ''}.</p>
+      <p className="Requester-name">
+        Requesters name is {requester !== undefined ? requester.name : ''}.
+      </p>
       <Footer />
     </div>
   )

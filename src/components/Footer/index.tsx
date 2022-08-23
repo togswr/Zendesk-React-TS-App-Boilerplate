@@ -1,21 +1,15 @@
 import React from 'react'
 import './style.scss'
 
-const Component = () => {
+const Component: React.FC = () => {
   return (
     <footer className="app-footer">
-      <a
-        className="app-link"
-        href="https://cloudhuset.dk"
-        target="_blank"
-      >
+      <a className="app-link" href="https://cloudhuset.dk" target="_blank">
         Made with&nbsp;
         <span role="img" aria-label="Love">
           ❤️
         </span>
-        &nbsp;
-        and
-        &nbsp;
+        &nbsp; and &nbsp;
         <span role="img" aria-label="Love">
           ☕
         </span>
