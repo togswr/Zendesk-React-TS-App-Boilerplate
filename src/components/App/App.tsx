@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 import zafClient from '../../zafClient'
-import Footer from '../Footer'
+import { Footer } from '../Footer'
 import { ZafUserContext } from '../../types/zafClient'
 
 const App: React.FC = () => {
@@ -29,4 +29,4 @@ const App: React.FC = () => {
   )
 }
 
-export default App
+export { App }

@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 
-const Component: React.FC = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="app-footer">
       <a className="app-link" href="https://cloudhuset.dk" target="_blank">
@@ -19,4 +19,4 @@ const Component: React.FC = () => {
   )
 }
 
-export default Component
+export { Footer }
