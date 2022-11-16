@@ -63,7 +63,7 @@
 		"@types/react": "^18.0.17",
 		"@types/react-dom": "^18.0.6",
 		"core-js": "^3.6.5",
-		"promise-polyfill": "^8.2.0",
+		"promise-polyfill": "^8.2.3",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"regenerator-runtime": "^0.13.7"
