@@ -60,7 +60,7 @@
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.18.9",
-		"@types/react": "^18.0.17",
+		"@types/react": "^18.0.23",
 		"@types/react-dom": "^18.0.6",
 		"core-js": "^3.6.5",
 		"promise-polyfill": "^8.2.0",
